@@ -8,6 +8,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
 </head>
 <body>
     <div class="animated-background"></div>
@@ -23,16 +25,37 @@
                     Experience the magic of modern web development with beautiful animations and smooth interactions.
                 </p>
                 
-                <button class="surprise-button" id="surpriseBtn">
+                <button class="button-base surprise-button" id="surpriseBtn">
                     <span class="button-text">✨ Click for a Surprise</span>
                     <div class="button-ripple"></div>
                 </button>
+
+                <button class="button-base newanimate-button" id="animateBtn">
+                    <span class="button-text">✨ Click for New Animate</span>
+                    <div class="button-ripple"></div>
+                </button>
+
+                <button class="button-base pt1-button" id="pt1Btn">
+                    <span class="button-text">Move to PT1</span>
+                    <div class="button-ripple"></div>
+                </button>
+
             </div>
         </div>
     </div>
     
     <div class="emoji-container" id="emojiContainer"></div>
+    <div class="bubble-container" id="bubbleContainer"></div>
+    <div class="typingtext-container" id="typingtextContainer"></div>
     
-    <script th:src="@{/js/script.js}"></script>
+    <script th:src="@{/js/welcome/welcome.main.js}"></script>
+    <script th:src="@{/js/welcome/welcome.surprise.js}"></script>
+    <script th:src="@{/js/welcome/welcome.bubble.js}"></script>
+    <script th:src="@{/js/welcome/welcome.typing.js}"></script>
+    <script th:src="@{/js/welcome/welcome.keyframes.js}"></script>
+    <script th:src="@{/js/welcome/welcome.observe.js}"></script>
+
+    <script th:src="@{/js/practice/webbasic.pt1.js}"></script>
+
 </body>
 </html>

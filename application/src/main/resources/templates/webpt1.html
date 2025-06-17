@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chi Tiết Sản Phẩm</title>
+    <link rel="stylesheet" href="/css/product.css" /> <!-- File CSS riêng -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    </head>
+
+    <body>
+        <div class="product-container">
+            <!-- ========== LEFT SIDE ========== -->
+            <div class="left-side">
+                <!-- Ảnh chính -->
+                <div class="img-main">
+                    <img th:src="@{/image/product-pt1-1.png}" alt="Ảnh sản phẩm chính" />
+                </div>
+
+                <!-- Ảnh nhỏ dạng thumbnail -->
+                <div class="img-thumbnails">
+                    <img th:src="@{/image/product-pt1-2.png}" alt="Ảnh phụ 1" />
+                    <img th:src="@{/image/product-pt1-3.png}" alt="Ảnh phụ 2" />
+                    <img th:src="@{/image/product-pt1-4.png}" alt="Ảnh phụ 3" />
+                </div>
+
+                <!-- Chia sẻ mạng xã hội -->
+                <div class="social">
+                    <p>Chia sẻ:</p>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/2023_Facebook_icon.svg/2048px-2023_Facebook_icon.svg.png" alt="Facebook">
+                    <img src="https://www.iconpacks.net/icons/2/free-facebook-messenger-icon-2881-thumb.png" alt="Messenger">
+                    <img src="https://cdn-icons-png.flaticon.com/512/174/174863.png" alt="Pinterest">
+                    <img src="https://cdn4.iconfinder.com/data/icons/social-media-icons-the-circle-set/48/twitter_circle-512.png" alt="Twitter">
+                </div>
+
+                <!-- Đã thích -->
+                <div class="like-section">
+                    <i class="fa-regular fa-heart"></i>
+                    <p>Đã thích (127)</p>
+                </div>
+            </div>
+
+            <!-- ========== RIGHT SIDE ========== -->
+            <div class="right-side">
+                <!-- Tên sản phẩm -->
+                <h1 class="product-title">Giày thể thao nam thoáng khí thời trang năng động mới</h1>
+
+                <!-- Đánh giá + bán -->
+                <div class="summary-info">
+                    <div class="rating">
+                        <span class="point">4.7</span>
+                        <span class="stars">★★★★★</span>
+                    </div>
+
+                    <div class="review-count">764 Đánh giá</div>
+                    <div class="sold">Đã bán 2.8k</div>
+                    <div class="report">Tố cáo</div>
+                </div>
+
+                <!-- Giá -->
+                <div class="price-section">
+                    <span class="price-final">₫125.778</span>
+                    <span class="price-old">₫190.000</span>
+                    <span class="discount">Giảm 2%</span>
+                </div>
+
+                <!-- Voucher -->
+                <div class="voucher">
+                    <p>Voucher của Shop</p>
+                    <p class="tag">Giảm 2%</p>
+                </div>
+
+                <!-- Combo -->
+                <div class="combo">
+                    <p>Combo Khuyến Mãi</p>
+                    <span class="tag">Mua 2 & giảm ₫1.000</span>
+                </div>
+
+                <!-- Vận chuyển -->
+                <div class="shipping">
+                    <p>Vận chuyển</p>
+                    <p>Nhận từ 19 Th06 - 20 Th06</p>
+                    <p>Phí ship 0đ</p>
+                </div>
+
+                <!-- Cam kết -->
+                <div class="guarantee">
+                    <p>An tâm mua sắm cùng Shopee</p>
+                    <p>Trả hàng miễn phí 15 ngày - Bảo hiểm Thời trang</p>
+                </div>
+
+
+                <!-- Màu sắc -->
+                <div class="product-color">
+                    <p>Màu sắc</p>
+                    <div class="color-options">
+                        <button class="color-button">
+                        <img th:src="@{/image/product-pt1-1.png}" alt="Sọc đen trắng">
+                        <span>Sọc đen trắng</span>
+                        </button>
+
+                        <button class="color-button">
+                        <img th:src="@{/image/product-pt1-2.png}" alt="Sọc đen và đỏ">
+                        <span>Sọc đen và đỏ</span>
+                        </button>
+
+                        <button class="color-button">
+                        <img th:src="@{/image/product-pt1-3.png}" alt="Ngọn lửa đen trắng">
+                        <span>Ngọn lửa đen trắng</span>
+                        </button>
+
+                        <button class="color-button">
+                        <img th:src="@{/image/product-pt1-4.png}" alt="Đen đỏ ngọn lửa">
+                        <span>Đen đỏ ngọn lửa</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Size -->
+                <div class="product-size">
+                    <p>Kích thước</p>
+                    <div class="size-options">
+                        <button>39</button><button>40</button><button>41</button>
+                        <button>42</button><button>43</button><button>44</button>
+                    </div>
+                </div>
+
+                <!-- Số lượng -->
+                <div class="product-quantity">
+                    <p>Số lượng</p>
+                    <div class="quantity-control">
+                        <button>-</button>
+                        <input type="number" value="1" min="1" />
+                        <button>+</button>
+                    </div>
+                    <p class="stock">215,793 sản phẩm có sẵn</p>
+                </div>
+
+                <!-- Hành động -->
+                <div class="product-actions">
+                    <button class="add-cart">Thêm vào giỏ hàng</button>
+                    <button class="buy-now">Mua với voucher ₫125.778</button>
+                </div>
+            </div>
+
+        </div>
+
+    </body>
+
+</html>

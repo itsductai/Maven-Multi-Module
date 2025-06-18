@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Chi Tiết Sản Phẩm</title>
-    <link rel="stylesheet" href="/css/product.css" /> <!-- File CSS riêng -->
+    <link rel="stylesheet" th:href="@{/css/style-pt1.css}" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     </head>
@@ -20,25 +20,38 @@
 
                 <!-- Ảnh nhỏ dạng thumbnail -->
                 <div class="img-thumbnails">
-                    <img th:src="@{/image/product-pt1-2.png}" alt="Ảnh phụ 1" />
-                    <img th:src="@{/image/product-pt1-3.png}" alt="Ảnh phụ 2" />
-                    <img th:src="@{/image/product-pt1-4.png}" alt="Ảnh phụ 3" />
+                    <div class="thumbnail-button previous-thumbnail">&#10094</div>
+                    <img class="img-main-now" th:src="@{/image/product-pt1-1.png}" alt="Ảnh phụ 0" />
+                    <img class="img-mini" th:src="@{/image/product-pt1-2.png}" alt="Ảnh phụ 1" />
+                    <img class="img-mini" th:src="@{/image/product-pt1-3.png}" alt="Ảnh phụ 2" />
+                    <img class="img-mini" th:src="@{/image/product-pt1-4.png}" alt="Ảnh phụ 3" />
+                    <div class="thumbnail-button next-thumbnail">&#10095</div>
+                    <!-- <img th:src="@{/image/product-pt1-5.png}" alt="Ảnh phụ 4" />
+                    <img th:src="@{/image/product-pt1-6.png}" alt="Ảnh phụ 5" /> -->
+                    
                 </div>
 
-                <!-- Chia sẻ mạng xã hội -->
-                <div class="social">
-                    <p>Chia sẻ:</p>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/2023_Facebook_icon.svg/2048px-2023_Facebook_icon.svg.png" alt="Facebook">
-                    <img src="https://www.iconpacks.net/icons/2/free-facebook-messenger-icon-2881-thumb.png" alt="Messenger">
-                    <img src="https://cdn-icons-png.flaticon.com/512/174/174863.png" alt="Pinterest">
-                    <img src="https://cdn4.iconfinder.com/data/icons/social-media-icons-the-circle-set/48/twitter_circle-512.png" alt="Twitter">
-                </div>
+                <section class="personal">
+                    <!-- Chia sẻ mạng xã hội -->
+                    <div class="social">
+                        <p>Chia sẻ:</p>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/2023_Facebook_icon.svg/2048px-2023_Facebook_icon.svg.png" alt="Facebook">
+                        <img src="https://www.iconpacks.net/icons/2/free-facebook-messenger-icon-2881-thumb.png" alt="Messenger">
+                        <img src="https://cdn-icons-png.flaticon.com/512/174/174863.png" alt="Pinterest">
+                        <img src="https://cdn4.iconfinder.com/data/icons/social-media-icons-the-circle-set/48/twitter_circle-512.png" alt="Twitter">
+                    </div>
 
-                <!-- Đã thích -->
-                <div class="like-section">
-                    <i class="fa-regular fa-heart"></i>
-                    <p>Đã thích (127)</p>
-                </div>
+                    <div class="line gray-text">
+                        <p>|</p>
+                    </div>
+
+                    <!-- Đã thích -->
+                    <div class="like-section">
+                        <i class="fa-regular fa-heart"></i>
+                        <p>Đã thích (127)</p>
+                    </div>
+                </section>
+
             </div>
 
             <!-- ========== RIGHT SIDE ========== -->
@@ -48,99 +61,145 @@
 
                 <!-- Đánh giá + bán -->
                 <div class="summary-info">
+                    <!-- Rating -->
                     <div class="rating">
-                        <span class="point">4.7</span>
+                        <span class="point underline">4.7</span>
                         <span class="stars">★★★★★</span>
                     </div>
 
-                    <div class="review-count">764 Đánh giá</div>
-                    <div class="sold">Đã bán 2.8k</div>
-                    <div class="report">Tố cáo</div>
+                    <div class="gray-text line">|</div>
+
+                    <!-- Review Count -->
+                    <div class="review-count">
+                        <span class="underline">764</span>
+                        <span class="gray-text">Đánh Giá</span>
+                    </div>
+
+                    <div class="gray-text line">|</div>
+
+                    <!-- Sold -->
+                    <div class="sold">
+                        <span class="gray-text">Đã Bán</span>
+                        <span >2.8k</span>
+                    </div>
+
+                    <!-- Report -->
+                    <div class="report gray-text">Tố cáo</div>
                 </div>
+
 
                 <!-- Giá -->
                 <div class="price-section">
                     <span class="price-final">₫125.778</span>
+                    <span class="voucher-price"><img src="https://deo.shopeemobile.com/shopee/shopee-pcmall-live-sg/productdetailspage/03bd4df693f3e66f2f8a.svg" alt=""></span>
                     <span class="price-old">₫190.000</span>
-                    <span class="discount">Giảm 2%</span>
                 </div>
 
-                <!-- Voucher -->
-                <div class="voucher">
-                    <p>Voucher của Shop</p>
-                    <p class="tag">Giảm 2%</p>
-                </div>
+                <div class="info-table">
+                    <!-- Voucher -->
+                    <div class="info-row voucher">
+                        <div class="info-left info-title"><p>Voucher của Shop</p></div>
+                        <div class="info-right">
+                            <p class="info-right tag-voucher">Giảm 2%</p>
+                        </div>
+                    </div>
 
-                <!-- Combo -->
-                <div class="combo">
-                    <p>Combo Khuyến Mãi</p>
-                    <span class="tag">Mua 2 & giảm ₫1.000</span>
-                </div>
+                    <!-- Combo -->
+                    <div class="info-row combo">
+                        <div class="info-left info-title"><p>Combo Khuyến Mãi</p></div>
+                        <div class="info-right">
+                            <span class="tag-combo">Mua 2 & giảm ₫1.000</span>
+                        </div>
+                    </div>
 
-                <!-- Vận chuyển -->
-                <div class="shipping">
-                    <p>Vận chuyển</p>
-                    <p>Nhận từ 19 Th06 - 20 Th06</p>
-                    <p>Phí ship 0đ</p>
-                </div>
+                    <!-- Vận chuyển -->
+                    <div class="info-row shipping">
+                        <div class="info-left info-title"><p>Vận chuyển</p></div>
+                        <div class="info-right info-shipping-container">
+                            <div class="icon-shipping"><i class="fa-solid fa-truck"></i></div>
+                            <div class="info-shipping">
+                                <p>Nhận từ 19 Th06 - 20 Th06 <i class="gray-text fa-solid fa-angle-right"></i></p>
+                                <p>Phí ship 0đ </p>
+                                <p class="note-shipping gray-text">Tặng Voucher ₫15.000 nếu đơn giao sau thời gian trên.</p>  
+                            </div>
+                            
+                        </div>
+                    </div>
 
-                <!-- Cam kết -->
-                <div class="guarantee">
-                    <p>An tâm mua sắm cùng Shopee</p>
-                    <p>Trả hàng miễn phí 15 ngày - Bảo hiểm Thời trang</p>
-                </div>
+                    <!-- Cam kết -->
+                    <div class="info-row guarantee">
+                        <div class="info-left info-title"><p>An tâm mua sắm cùng Shopee</p></div>
+                        
+                        <div class="info-right info-guarantee-container">
+                            <div class="icon-shield"><i class="fa-solid fa-shield-halved"></i></div>
+                            <div><p>Trả hàng miễn phí 15 ngày - Bảo hiểm Thời trang <i class="fa-solid fa-chevron-down gray-text"></i></p></div>
+                        </div>
+                    </div>
 
 
-                <!-- Màu sắc -->
-                <div class="product-color">
-                    <p>Màu sắc</p>
-                    <div class="color-options">
-                        <button class="color-button">
-                        <img th:src="@{/image/product-pt1-1.png}" alt="Sọc đen trắng">
-                        <span>Sọc đen trắng</span>
-                        </button>
+                    <!-- Màu sắc -->
+                    <div class="info-row product-color">
+                        <div class="info-left info-title"><p>Màu sắc</p></div>
+                        <div class="info-right color-options">
+                            <button class="color-button button">
+                            <img th:src="@{/image/product-pt1-1.png}" alt="Sọc đen trắng">
+                            <span>Sọc đen trắng</span>
+                            </button>
 
-                        <button class="color-button">
-                        <img th:src="@{/image/product-pt1-2.png}" alt="Sọc đen và đỏ">
-                        <span>Sọc đen và đỏ</span>
-                        </button>
+                            <button class="color-button button">
+                            <img th:src="@{/image/product-pt1-2.png}" alt="Sọc đen và đỏ">
+                            <span>Sọc đen và đỏ</span>
+                            </button>
 
-                        <button class="color-button">
-                        <img th:src="@{/image/product-pt1-3.png}" alt="Ngọn lửa đen trắng">
-                        <span>Ngọn lửa đen trắng</span>
-                        </button>
+                            <button class="color-button button">
+                            <img th:src="@{/image/product-pt1-3.png}" alt="Ngọn lửa đen trắng">
+                            <span>Ngọn lửa đen trắng</span>
+                            </button>
 
-                        <button class="color-button">
-                        <img th:src="@{/image/product-pt1-4.png}" alt="Đen đỏ ngọn lửa">
-                        <span>Đen đỏ ngọn lửa</span>
-                        </button>
+                            <button class="color-button button">
+                            <img th:src="@{/image/product-pt1-4.png}" alt="Đen đỏ ngọn lửa">
+                            <span>Đen đỏ ngọn lửa</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Size -->
+                    <div class="info-row product-size">
+                        <div class="info-left info-title"><p>Kích thước</p></div>
+                        <div class="info-right size-options">
+                            <button class="button size-button">39</button>
+                            <button class="button size-button">40</button>
+                            <button class="button size-button">41</button>
+                            <button class="button size-button">42</button>
+                            <button class="button size-button">43</button>
+                            <button class="button size-button">44</button>
+                        </div>
+                    </div>
+
+                    <!-- Số lượng -->
+                    <div class="info-row product-quantity">
+                        <div class="info-left info-title"><p>Số lượng</p></div>
+                        <div class="info-right quantity-control">
+                            <div class="product-control">
+                                <button>-</button>
+                                <input type="text" value="1" />
+                                <button>+</button> 
+                            </div>
+                            
+                            <div>
+                               <p class="gray-text ">215,793 sản phẩm có sẵn</p> 
+                            </div>
+                            
+                        </div>
                     </div>
                 </div>
 
-                <!-- Size -->
-                <div class="product-size">
-                    <p>Kích thước</p>
-                    <div class="size-options">
-                        <button>39</button><button>40</button><button>41</button>
-                        <button>42</button><button>43</button><button>44</button>
-                    </div>
-                </div>
-
-                <!-- Số lượng -->
-                <div class="product-quantity">
-                    <p>Số lượng</p>
-                    <div class="quantity-control">
-                        <button>-</button>
-                        <input type="number" value="1" min="1" />
-                        <button>+</button>
-                    </div>
-                    <p class="stock">215,793 sản phẩm có sẵn</p>
-                </div>
+                
 
                 <!-- Hành động -->
                 <div class="product-actions">
-                    <button class="add-cart">Thêm vào giỏ hàng</button>
-                    <button class="buy-now">Mua với voucher ₫125.778</button>
+                    <button class="add-cart"><i class="fa-solid fa-cart-plus"></i> Thêm vào giỏ hàng</button>
+                    <button class="buy-now">Mua với voucher <span>₫125.778</span></button>
                 </div>
             </div>
 

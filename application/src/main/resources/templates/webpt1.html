@@ -6,7 +6,7 @@
     <title>Chi Tiết Sản Phẩm</title>
     <link rel="stylesheet" th:href="@{/css/style-pt1.css}" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     </head>
 
     <body>
@@ -15,21 +15,23 @@
             <div class="left-side">
                 <!-- Ảnh chính -->
                 <div class="img-main">
-                    <img th:src="@{/image/product-pt1-1.png}" alt="Ảnh sản phẩm chính" />
+                    <img class="img-main-img" th:src="@{/image/product-pt1-1.png}" alt="Ảnh sản phẩm chính" />
                 </div>
 
                 <!-- Ảnh nhỏ dạng thumbnail -->
-                <div class="img-thumbnails">
+                 <div class="thumbnail-wrapper">
                     <div class="thumbnail-button previous-thumbnail">&#10094</div>
-                    <img class="img-main-now" th:src="@{/image/product-pt1-1.png}" alt="Ảnh phụ 0" />
-                    <img class="img-mini" th:src="@{/image/product-pt1-2.png}" alt="Ảnh phụ 1" />
-                    <img class="img-mini" th:src="@{/image/product-pt1-3.png}" alt="Ảnh phụ 2" />
-                    <img class="img-mini" th:src="@{/image/product-pt1-4.png}" alt="Ảnh phụ 3" />
+                        <div class="img-thumbnails">
+                            <img class=" img-mini img-main-now" th:src="@{/image/product-pt1-1.png}" alt="Ảnh phụ 0" />
+                            <img class="img-mini" th:src="@{/image/product-pt1-2.png}" alt="Ảnh phụ 1" />
+                            <img class="img-mini" th:src="@{/image/product-pt1-3.png}" alt="Ảnh phụ 2" />
+                            <img class="img-mini" th:src="@{/image/product-pt1-4.png}" alt="Ảnh phụ 3" />
+                            <img class="img-mini" th:src="@{/image/product-pt1-5.png}" alt="Ảnh phụ 4" />
+                            <img class="img-mini" th:src="@{/image/product-pt1-6.png}" alt="Ảnh phụ 5" />
+                        </div>
                     <div class="thumbnail-button next-thumbnail">&#10095</div>
-                    <!-- <img th:src="@{/image/product-pt1-5.png}" alt="Ảnh phụ 4" />
-                    <img th:src="@{/image/product-pt1-6.png}" alt="Ảnh phụ 5" /> -->
-                    
-                </div>
+                 </div>
+                
 
                 <section class="personal">
                     <!-- Chia sẻ mạng xã hội -->
@@ -47,9 +49,9 @@
 
                     <!-- Đã thích -->
                     <div class="like-section">
-                        <i class="fa-regular fa-heart"></i>
-                        <p>Đã thích (127)</p>
-                    </div>
+                        <i class="heart fa-regular fa-heart"></i>
+                        <p>Đã thích (<span class = "like-number">127</span>)</p>
+                    </div> 
                 </section>
 
             </div>
@@ -181,9 +183,9 @@
                         <div class="info-left info-title"><p>Số lượng</p></div>
                         <div class="info-right quantity-control">
                             <div class="product-control">
-                                <button>-</button>
-                                <input type="text" value="1" />
-                                <button>+</button> 
+                                <button class="btn-number minus">-</button>
+                                <input type="number" value="1" min="1"/>
+                                <button class="btn-number plus">+</button> 
                             </div>
                             
                             <div>
@@ -204,6 +206,7 @@
             </div>
 
         </div>
+        <script th:src="@{/js/practice/web.shopee-practice1.js}"></script>
 
     </body>
 

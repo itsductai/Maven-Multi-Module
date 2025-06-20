@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const animateBtn = document.getElementById("pt1Btn");
-
-    animateBtn.addEventListener("click", () => {
+    // animation khi chuyển từ trang welcome sang pt1
+    document.getElementById("pt1Btn").addEventListener("click", () => {
         console.log("pt1Btn click"); // kiểm tra có log không
         $("#pt1Btn").addClass("clicked");
         
@@ -9,7 +8,5 @@ document.addEventListener("DOMContentLoaded", () => {
             $("#pt1Btn").removeClass("clicked");
             window.location.href="/webpt1";
         }, 500);
-
-
     });
 }); 

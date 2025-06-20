@@ -32,6 +32,14 @@
       </dependency>
     </dependencies>
   </dependencyManagement>
+  
+  <!--Phải chỉ định parent là spring-boot-starter-parent -->
+  <parent>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <version>2.7.18</version>
+    <relativePath/> <!-- để tránh tìm nhầm spring-boot-starter-parent trong local -->
+  </parent>
 
   <!-- Cho phép module con dùng plugin spring-boot -->
   <build>

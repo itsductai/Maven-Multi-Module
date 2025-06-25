@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice 2</title>
+    <link rel="stylesheet" href="/css/style-pt2.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700&display=swap" rel="stylesheet">
+    <script src="/js/practice/web.shopee-practice2.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- 1. Banner / Hero Slider -->
+        <section id="hero-slider" class="section-slider">
+            <!-- JS sẽ render các item slider tại đây -->
+            <div id="carouselExampleSlidesOnly" class="slider-container  carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                    <img class="d-block w-100" src="/image/practice2/slider-pt2-1.jpg" alt="First slide">
+                    </div>
+                    <div class="carousel-item">
+                    <img class="d-block w-100" src="/image/practice2/slider-pt2-2.jpg" alt="Second slide">
+                    </div>
+                    <div class="carousel-item">
+                    <img class="d-block w-100" src="/image/practice2/slider-pt2-3.jpg" alt="Third slide">
+                    </div>
+                    <div class="carousel-item">
+                    <img class="d-block w-100" src="/image/practice2/slider-pt2-4.jpg" alt="Third slide">
+                    </div>
+                    <div class="carousel-item">
+                    <img class="d-block w-100" src="/image/practice2/slider-pt2-5.jpg" alt="Third slide">
+                    </div>
+                   
+                </div>
+                <div class="point-wrapper">
+                     <!-- JS render các point tùy vào lượng ảnh trong slider -->
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Danh mục (Category List) -->
+        <section id="category-section" class="section-category">
+            <h2 class="section-title gray-text">DANH MỤC</h2> 
+            <div class="button previous-button"><i class="fa-solid fa-angle-left"></i></div>
+            <div class="button next-button "><i class="fa-solid fa-angle-right"></i></div>
+            <div class="line-top"></div> <!-- Line siêu mảnh nằm trên -->
+            <div id="category-list" class="scroll-content category-grid">
+               
+               <!-- JS render category item -->
+               <!-- <div class="category-card">
+                  <img src="../static/image/practice2/danhmuc-thoitrangnam.jpg" alt="">
+                  <p>Thời trang nam</p>
+               </div> -->
+               
+            </div>
+        </section>
+
+        <!-- 3. Tìm kiếm hàng đầu (Best Search / Popular Keywords) -->
+        <section class="section-top-search">
+            <div class="title-top-search">
+               <h2 class="section-title color-text">TÌM KIẾM HÀNG ĐẦU</h2>
+               <h2 class="see-all color-text ">Xem tất cả ></h2>
+            </div>
+            
+            <div class="top-search-list">
+               <div class="button previous-button"><i class="fa-solid fa-angle-left"></i></div>
+               <div class="button next-button"><i class="fa-solid fa-angle-right"></i></div>
+              
+               <div class="scroll-content top-search-scroll">
+                  <!-- các .top-search-card sẽ được render JS ở đây  
+                  <div class="top-search-card">
+                  <div class="header">
+                     <img class="icon-top-search" src="../static//image/practice2/topsearch-top.png" alt="">
+                     <img class="top-search-img" src="../static/image/practice2/topsearch1.jpg" alt="">
+                     <p class="sold">
+                        Bán 105k / tháng
+                     </p>
+                  </div>
+                  <div class="title-top-search-card">Quạt mini cầm tay</div>
+               </div> -->
+               </div>
+
+            </div>
+        </section>
+
+        <!-- 4. Gợi ý hôm nay (Today's Suggestions / Recommendations) -->
+
+        <!-- kiểu dữ diệu mẫu: sale; frame; img; isVideo; brand-title: ["mall", "favorite",...], title, flashsaleinfo { type: "normal", key: "rẻ vô địch"; type: "voucher", key: "giảm 5%"};  -->
+        
+        <!-- const suggestionItems = [
+            {
+               sale: "-44%",
+               isVideo: true,
+               frameImg: "../static/image/practice2/sanpham-frame3.png",
+               img: "../static/image/practice2/sanpham1.png",
+               title: "Cáp Sạc Nhanh, Dây Sạc Tự Ngắt Bọc Lưới",
+               price: "₫15.800",
+               brandTags: ["favorite", "mall"],
+               flashsaleInfo: [ kh tồn tại cả 3, random 1 cái, 2 cái đầu hoặc duy nhất cái thứ 3
+                  { type: "normal", key: "Rẻ Vô Địch" },
+                  { type: "voucher", key: "Giảm 5%" },
+                   {type: "flashsale", key: "20 th 6 12:00"} hoặc {type: "flashsale", key: "đang bán chạy"}
+               ],
+               saleTotal: 12.500
+            },
+            ...
+            ] -->
+        
+        <section id="today-suggestion-section" class="section-suggestion">
+            <h2 class="suggestion-title section-title color-text center-text">GỢI Ý HÔM NAY</h2>
+            <div class="suggestion-grid">
+               <!-- JS render sản phẩm gợi ý -->
+              
+             
+            </div>
+        </section>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script src="/js/practice/web.shopee-practice2-data.js"></script>
+</body>
+</html>

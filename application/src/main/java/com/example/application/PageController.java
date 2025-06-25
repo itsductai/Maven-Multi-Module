@@ -24,6 +24,12 @@ public class PageController {
     @GetMapping("/webpt1")
     public String webpt1(Model model) {
         model.addAttribute("message", myService.getWelcomeMessage());
-        return "webpt1"; // tìm file templates/welcome.html
+        return "webpt1"; 
+    }
+
+    @GetMapping("/webpt2")
+    public String webpt2(Model model) {
+        model.addAttribute("message", myService.getWelcomeMessage());
+        return "webpt2"; 
     }
 }
